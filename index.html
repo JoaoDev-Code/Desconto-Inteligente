@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#101114">
+    <meta name="description" content="Verifique sua elegibilidade para descontos.">
+
+    <title>Desconto de Loja</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="exemplo01.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="cabecalho">
+            <div class="logo">JP</div>
+            <span class="etiqueta">SISTEMA DE VENDAS</span>
+        </header>
+
+        <section class="cartao">
+
+            <p class="subtitulo">BENEFÍCIOS EXCLUSIVOS</p>
+
+            <h1>Desconto de Loja</h1>
+
+            <p class="descricao">
+                Confira se sua compra tem direito a um desconto especial.
+            </p>
+
+            <form id="formulario">
+
+                <div class="campo">
+                    <label for="valor">Valor da compra</label>
+
+                    <div class="campo-valor">
+                        <span>R$</span>
+                        <input
+                            type="number"
+                            id="valor"
+                            placeholder="0,00"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="vip">Você é cliente VIP?</label>
+
+                    <select id="vip" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="sim">Sim, sou VIP</option>
+                        <option value="nao">Não sou VIP</option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    Verificar desconto
+                    <span>→</span>
+                </button>
+
+            </form>
+
+            <div id="resposta" class="resposta" aria-live="polite">
+                <span class="icone">✦</span>
+                <p>Preencha os campos para verificar seu benefício.</p>
+            </div>
+
+            <div class="regra">
+                <span>✧</span>
+                <p>
+                    Clientes VIP ou compras acima de R$ 200
+                    podem receber desconto.
+                </p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>DESCONTO DE LOJA <span>•</span> SISTEMA DEMONSTRATIVO</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
